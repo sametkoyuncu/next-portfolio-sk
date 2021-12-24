@@ -1,17 +1,21 @@
 // {
 //   pages.map((page, index) => (
 //     <li key={index}>
+//<Link href={page.link}>
 //       <a
 //         href={page.link}
 //         className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900dark:text-gray-200 dark:hover:text-white"
 //       >
 //         {page.name}
 //       </a>
+//</Link>
 //     </li>
 //   ))
 // }
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 function DropdownMenu({ pages }) {
   const [menuShow, setMenuShow] = useState(false)
@@ -24,13 +28,14 @@ function DropdownMenu({ pages }) {
         type="button"
         onClick={() => (menuShow ? setMenuShow(false) : setMenuShow(true))}
       >
-        <svg
+        <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           id="menu-button"
           class="h-6 w-6 cursor-pointer block"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          whileHover={{ rotate: 180, transition: { duration: 0.5 } }}
         >
           <path
             strokeLinecap="round"
@@ -38,7 +43,7 @@ function DropdownMenu({ pages }) {
             strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h16"
           />
-        </svg>
+        </motion.svg>
       </button>
 
       <div

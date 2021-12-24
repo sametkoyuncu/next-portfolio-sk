@@ -1,5 +1,3 @@
-// import { useTheme } from '../../context/ThemeContext'
-import { useState } from 'react'
 import { useTheme } from 'next-themes'
 function ThemeToggleBtn() {
   const { theme, setTheme } = useTheme()
