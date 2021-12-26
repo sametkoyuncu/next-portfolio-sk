@@ -1,6 +1,16 @@
 # Portfolyo
+Next.js ve Tailwindcss ile geliştirdiğim kişisel websitem.
 
-Next.js ve Tailwindcss ile geliştirdiğim portfolyo sitem.
+# Bölümler
+- Anasayfa
+- Blog
+- Projelerim
+- Ben Kimin?
+- İletişim
+
+# Ekran Görüntüleri
+### anasayda (açık/koyu tema)
+![homepage](https://github.com/sametkoyuncu/next-portfolio-sk/blob/main/screenshots/homepage.png?raw=true)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
