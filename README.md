@@ -1,5 +1,6 @@
 # Portfolyo
 Next.js ve Tailwindcss ile geliştirdiğim kişisel websitem.
+[Görüntülemek için tıklayınız 👆](https://sametkoyuncu.netlify.app/)
 
 # Bölümler
 - Anasayfa
