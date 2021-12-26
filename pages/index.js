@@ -23,25 +23,25 @@ export default function Home() {
   return (
     <Layout title={'sk.'} description={'Samet Koyuncu Kişisel Websitesi'}>
       <motion.img
-        src="images/space/eclipse-shadow.png"
+        src="images/space/planet-earth.png"
         alt="ball-1"
-        className="hidden md:block h-40 w-auto absolute top-60 right-10 z-[1]"
+        className="hidden md:block h-48 w-auto absolute top-60 right-40 z-[1]"
         whileHover={{ y: -10, rotate: 30, transition: { duration: 0.4 } }}
         drag
         dragConstraints={{ top: 0, left: 0, bottom: 0, right: 0 }}
       />
       <motion.img
-        src="images/space/asteroid-shadow.png"
+        src="images/space/jupiter.png"
         alt="ball-2"
-        className="hidden md:block h-32 w-auto absolute bottom-10 left-10 z-[1]"
+        className="hidden md:block h-28 w-auto absolute bottom-10 left-20 z-[1]"
         whileHover={{ y: -10, rotate: 30, transition: { duration: 0.4 } }}
         drag
         dragConstraints={{ top: 0, left: 0, bottom: 0, right: 0 }}
       />
       <motion.img
-        src="images/space/destroyed-shadow.png"
+        src="images/space/meteorites.png"
         alt="ball-2"
-        className="hidden md:block h-10 w-10 absolute top-5 right-60 z-[1]"
+        className="hidden md:block h-10 w-10 absolute top-20 right-96 z-[1]"
         whileHover={{ y: -10, rotate: 30, transition: { duration: 0.4 } }}
         drag
         dragConstraints={{ top: 0, left: 0, bottom: 0, right: 0 }}
@@ -113,7 +113,7 @@ export default function Home() {
                             npm
                           </span>{' '}
                           install{' '}
-                          <span className="font-bold text-purple-300">
+                          <span className="font-bold text-sky-300">
                             express
                           </span>
                         </p>
@@ -123,9 +123,7 @@ export default function Home() {
                             npm
                           </span>{' '}
                           install{' '}
-                          <span className="font-bold text-purple-300">
-                            react
-                          </span>
+                          <span className="font-bold text-sky-300">react</span>
                         </p>
                       </div>
                     </div>

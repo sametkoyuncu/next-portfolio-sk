@@ -1,40 +1,47 @@
-function BlogCardHorizontal() {
+import moment from 'moment'
+moment().locale('tr')
+import { motion } from 'framer-motion'
+
+function BlogCardHorizontal({
+  blog: { id, title, content, cover, createdAt },
+}) {
   return (
-    <div
-      class="max-w-sm w-full lg:max-w-full lg:flex mb-4"
+    <motion.div
+      class="max-w-sm w-full lg:max-w-full lg:flex mb-5 shadow-lg "
       style={{ cursor: 'pointer' }}
+      whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
     >
       <div
-        class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-        style={{ backgroundImage: "url('/images/blog/card-left.jpg')" }}
+        class="h-48 lg:h-auto lg:w-48 flex-none bg-cover text-center overflow-hidden rounded-l-lg"
+        style={{ backgroundImage: `url('${cover.url}')` }}
         title="Woman holding a mug"
       ></div>
-      <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-white dark:border-zinc-900 dark:lg:border-zinc-900 dark:bg-zinc-800 ">
+      <div class=" p-4 flex flex-col justify-between leading-normal rounded-r-lg bg-white  dark:bg-zinc-800 ">
         <div class="mb-8">
           <div class="text-gray-900 dark:text-gray-100 font-bold text-xl mb-2">
-            Can coffee make you a better developer?
+            {title}
           </div>
           <p class="text-gray-700 dark:text-white text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+            {content.slice(0, 200) + '...'}
           </p>
         </div>
         <div class="flex items-center">
           <img
             class="w-10 h-10 rounded-full mr-4"
-            src="/images/blog/jonathan.jpg"
-            alt="Avatar of Jonathan Reinink"
+            src="https://avatars.githubusercontent.com/u/17934179?v=4"
+            alt="Avatar of Samet Koyuncu"
           />
           <div class="text-sm">
             <p class="text-gray-900 leading-none dark:text-white">
-              Jonathan Reinink
+              Samet Koyuncu
             </p>
-            <p class="text-gray-600 dark:text-gray-300">Aug 18</p>
+            <p class="text-gray-600 dark:text-gray-300">
+              {moment(createdAt).format('DD MMM yyyy')}
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

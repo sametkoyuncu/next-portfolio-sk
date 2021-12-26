@@ -1,18 +1,3 @@
-// {
-//   pages.map((page, index) => (
-//     <li key={index}>
-//<Link href={page.link}>
-//       <a
-//         href={page.link}
-//         className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900dark:text-gray-200 dark:hover:text-white"
-//       >
-//         {page.name}
-//       </a>
-//</Link>
-//     </li>
-//   ))
-// }
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -52,30 +37,18 @@ function DropdownMenu({ pages }) {
         } absolute top-0 left-20 z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-zinc-800 shadow-lg`}
       >
         <ul className="py-1" ariaLabelledby="dropdownButton">
-          <li>
-            <a
-              href="/blog"
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900 dark:text-gray-200 dark:hover:text-white"
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900 dark:text-gray-200 dark:hover:text-white"
-            >
-              Earnings
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900 dark:text-gray-200 dark:hover:text-white"
-            >
-              Sign out
-            </a>
-          </li>
+          {pages.map((page, index) => (
+            <li key={index}>
+              <Link href={page.disabled ? '#' : page.link}>
+                <a
+                  href={page.link}
+                  className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-900 dark:text-gray-200 dark:hover:text-white"
+                >
+                  {page.name}
+                </a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </span>

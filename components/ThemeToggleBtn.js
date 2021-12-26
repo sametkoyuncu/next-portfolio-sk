@@ -5,7 +5,7 @@ function ThemeToggleBtn() {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
   return (
-    <div className="toggle">
+    <div className="toggle shadow-lg">
       <input
         type="checkbox"
         id="checkbox"
