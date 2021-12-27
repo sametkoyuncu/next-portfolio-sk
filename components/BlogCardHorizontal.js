@@ -1,5 +1,4 @@
 import moment from 'moment'
-moment().locale('tr')
 import { motion } from 'framer-motion'
 
 function BlogCardHorizontal({

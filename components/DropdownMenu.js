@@ -16,7 +16,7 @@ function DropdownMenu({ pages }) {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           id="menu-button"
-          class="h-6 w-6 cursor-pointer block"
+          className="h-6 w-6 cursor-pointer block"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -34,9 +34,9 @@ function DropdownMenu({ pages }) {
       <div
         className={`${
           menuShow ? '' : 'hidden'
-        } absolute top-0 left-20 z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-zinc-800 shadow-lg`}
+        } absolute top-0 left-20 z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 dark:bg-zinc-800 shadow-lg`}
       >
-        <ul className="py-1" ariaLabelledby="dropdownButton">
+        <ul className="py-1" aria-labelledby="dropdownButton">
           {pages.map((page, index) => (
             <li key={index}>
               <Link href={page.disabled ? '#' : page.link}>

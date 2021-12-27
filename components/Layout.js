@@ -31,7 +31,7 @@ function Layout({ title, description, children }) {
       </Head>
       <div className="relative z-10 px-3 overflow-hidden min-h-screen bg-primary-light antialiased font-montserrat dark:bg-zinc-700 dark:text-white">
         <div className="w-full h-full">
-          <div className="fixed left-0 right-0 z-50 bg-primary-light dark:bg-zinc-700">
+          <div className="fixed left-0 right-0 z-50 bg-primary-light dark:bg-zinc-700 shadow-sm">
             <Header />
           </div>
           <div className="pt-16">{children}</div>

@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import Typical from 'react-typical'
 import Layout from '../components/Layout'
 import GithubIcon from '../components/icons/GithubIcon'
@@ -21,7 +20,10 @@ export default function Home() {
     (props, prevProps) => true
   )
   return (
-    <Layout title={'sk.'} description={'Samet Koyuncu Kişisel Websitesi'}>
+    <Layout
+      title={'sk. | Anasayfa'}
+      description={'Samet Koyuncu Kişisel Websitesi'}
+    >
       <motion.img
         src="images/space/planet-earth.png"
         alt="ball-1"
