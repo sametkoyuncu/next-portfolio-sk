@@ -4,10 +4,8 @@ import ThemeToggleBtn from './ThemeToggleBtn'
 
 const pages = [
   { name: 'Anasayfa', link: '/', disabled: false },
-  { name: 'Blog', link: '/blog', disabled: false },
   { name: 'Projelerim', link: '/projects', disabled: false },
-  { name: 'Ben Kimim?', link: '/about', disabled: false },
-  { name: 'İletişim', link: '/contact', disabled: true },
+  { name: 'Ben Kimim?', link: '/about', disabled: false }
 ]
 
 function Header() {
